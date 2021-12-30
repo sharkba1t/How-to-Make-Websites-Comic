@@ -42,7 +42,7 @@
     padding: 0;
 }
 
-h1, p {
+h1, h2, p {
     font-family: "Noto Sans", sans-serif;
     font-weight: 400;
     color: #272727;
@@ -77,6 +77,56 @@ h1, p {
 
 .a{
     grid-area: 2 / 2 / span 1 / span 1;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr; 
+    grid-template-rows: 0.5fr 1fr 0.5fr 1fr 0.5fr; 
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+
+/* icons within the first grid */
+.a > p {
+    font-size: 0.8em;
+}
+.a > h2 {
+    font-weight: 700;
+    grid-area: 1 / 2 / span 1 /span 2;
+}
+
+.fa-html5{
+    grid-area: 2 / 1 / span 1 / span 2;
+}
+
+#html-text {
+    grid-area: 3 / 1 / span 1 / span 2;
+    align-self: center;
+}
+
+.fa-css3{
+    grid-area: 2 / 3 / span 1 / span 1;
+}
+
+#css-text {
+    grid-area: 3 / 3 / span 1 / span 1;
+}
+
+.fa-js-square {
+    grid-area: 4 / 2 / span 1 / span 1;
+}
+
+#js-text{
+    grid-area: 5 / 2 / span 1 / span 1;
+}
+
+.fa-laptop-code{
+    grid-area: 4 / 3 / span 1 / span 2;
+}
+
+#ide-text{
+    grid-area: 5 / 3 / span 1 / span 2;
 }
 
 .b {
@@ -127,7 +177,7 @@ h1, p {
     justify-self: center;
 }
 
-.a, .b, .c, .d, .e, .f {
+.b, .c, .d, .e, .f {
     display: flex;
     justify-content: center;
 }
@@ -142,7 +192,7 @@ img {
         display: grid;
         max-width: 100%; 
         grid-template-columns: 0.25fr 2.5fr 0.25fr;
-        grid-template-rows: 0.4fr repeat(3, 1fr 0.2fr) 0.4fr; 
+        grid-template-rows: 0.4fr repeat(6, 1fr 0.3fr) 0.4fr; 
         align-items: center;
         justify-items: center;
         background-color: whitesmoke;
@@ -156,15 +206,16 @@ img {
         }
         
         #credit {
+            margin-top: 30px;
             grid-row: 1 / span 1;
-            grid-column: 3 / span 1;
+            grid-column: 2 / span 1;
             justify-self: end;
             align-self: end;
             margin: 0 10% 10px 0;
         }
 
     .a{
-        grid-area: 2 / 2 / span 1 / span 1;
+
     }
 
     .b {
