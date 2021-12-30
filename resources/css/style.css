@@ -1,0 +1,209 @@
+/*fonts import*/
+/* latin */
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/notosans/v21/o-0OIpQlx3QUlC5A4PNr4ARCQ_k.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+  /* latin */
+  @font-face {
+    font-family: 'Noto Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/notosans/v21/o-0TIpQlx3QUlC5A4PNr4Az5ZuyDzW0.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+  /* latin */
+  @font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/notosans/v21/o-0IIpQlx3QUlC5A4PNr5TRA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+  /* latin */
+  @font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/notosans/v21/o-0NIpQlx3QUlC5A4PNjXhFVZNyB.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+/* CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, p {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    color: #272727;
+}
+
+.grid {
+    margin: 50px 100px;
+    display: grid;
+    max-width: 100%; 
+    grid-template-columns: 0.5fr repeat(3, 1.5fr) 0.5fr;
+    grid-template-rows: 0.4fr 1fr 0.2fr 1fr 0.4fr; 
+    align-items: center;
+    justify-items: center;
+    background-color: whitesmoke;
+}
+
+#title {
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: center;
+}
+
+#credit {
+    grid-row: 1 / span 1;
+    grid-column: 4 / span 1;
+    justify-self: end;
+    align-self: end;
+    margin: 0 10% 10px 0;
+}
+
+
+.a{
+    grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.b {
+    grid-area: 2 / 3 / span 1 / span 1;
+}
+
+.b-text {
+    grid-area: 3 / 3 / span 1 / span 1;
+}
+
+.c {
+    grid-area: 2 / 4 / span 1 / span 1;
+}
+
+.c-text {
+    grid-area: 3 / 4 / span 1 / span 1;
+}
+
+.d {
+    grid-area: 4 / 2 / span 1 / span 1;
+}
+
+.d-text {
+    grid-area: 5 / 2 / span 1 / span 1;
+}
+
+.e {
+    grid-area: 4 / 3 / span 1 / span 1;
+}
+
+.e-text {
+    grid-area: 5 / 3 / span 1 / span 1;
+}
+
+.f {
+    grid-area: 4 / 4 / span 1 / span 1;
+}
+
+.f-text {
+    grid-area: 5 / 4 / span 1 / span 1;
+}
+
+.text {
+    justify-self: center;
+}
+
+.picture {
+    justify-self: center;
+}
+
+.a, .b, .c, .d, .e, .f {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    max-width: 80%;
+}
+
+@media only screen and (max-width: 1000px){
+    .grid {
+        margin: 50px 50px;
+        display: grid;
+        max-width: 100%; 
+        grid-template-columns: 0.25fr 2.5fr 0.25fr;
+        grid-template-rows: 0.4fr repeat(3, 1fr 0.2fr) 0.4fr; 
+        align-items: center;
+        justify-items: center;
+        background-color: whitesmoke;
+        }
+
+        #title {
+            grid-row: 1 / span 1;
+            grid-column: 2 / span 1;
+            justify-self: center;
+            align-self: center;
+        }
+        
+        #credit {
+            grid-row: 1 / span 1;
+            grid-column: 3 / span 1;
+            justify-self: end;
+            align-self: end;
+            margin: 0 10% 10px 0;
+        }
+
+    .a{
+        grid-area: 2 / 2 / span 1 / span 1;
+    }
+
+    .b {
+        grid-area: 4 / 2 / span 1 / span 1;
+    }
+
+    .b-text {
+        grid-area: 5 / 2 / span 1 / span 1;
+    }
+
+    .c {
+        grid-area: 6 / 2 / span 1 / span 1;
+    }
+
+    .c-text {
+        grid-area: 7 / 2 / span 1 / span 1;
+    }
+
+    .d {
+        grid-area: 8 / 2 / span 1 / span 1;
+    }
+
+    .d-text {
+        grid-area: 9 / 2 / span 1 / span 1;
+    }
+
+    .e {
+        grid-area: 10 / 2 / span 1 / span 1;
+    }
+
+    .e-text {
+        grid-area: 11 / 2 / span 1 / span 1;
+    }
+
+    .f {
+        grid-area: 12 / 2 / span 1 / span 1;
+    }
+
+    .f-text {
+        grid-area: 13 / 2 / span 1 / span 1;
+    }
+}
