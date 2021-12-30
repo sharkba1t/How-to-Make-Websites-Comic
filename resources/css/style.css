@@ -192,6 +192,9 @@ img {
 }
 
 @media only screen and (max-width: 1000px){
+    h1, h2, p {
+        font-size: 2em;
+    }
     .grid {
         margin: 50px 50px;
         display: grid;
@@ -218,10 +221,6 @@ img {
             align-self: end;
             margin: 0 10% 10px 0;
         }
-
-    .a{
-
-    }
 
     .b {
         grid-area: 4 / 2 / span 1 / span 1;
