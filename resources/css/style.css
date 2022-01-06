@@ -44,7 +44,7 @@
 
 
 body {
-    background: url(../img/background.jpg) fixed repeat;
+    background: linear-gradient(180deg, red, orange, yellow, green,blue,violet) fixed repeat;
 }
 
 h1, h2, p {
